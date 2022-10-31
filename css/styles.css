@@ -1,0 +1,112 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+body{
+background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);;
+}
+
+
+/* Header */
+
+
+.derecha {
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+/* Main */
+.sectionmain {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 3pc;
+    
+}
+.h2center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 375px) {
+
+    section {
+        flex-flow: column;
+    }
+
+}
+.card{
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease;
+}
+.card:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+
+
+/* foooter */
+
+.footer {
+    border: 1px  rgba(0, 0, 0, 0.925);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 0.2fr;
+    grid-template-areas:
+        "titulo redes"
+        
+    ;
+}
+
+.footer__titulo {
+    grid-area: titulo;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    margin: auto;
+}
+
+
+.footer__texto {
+    grid-area: redes;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+
+
+
+
+@media (max-width: 375px) {
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 0.25fr;
+        grid-template-areas:
+        "titulo"
+        "redes"
+        
+        ;
+        
+    }
+
+}
